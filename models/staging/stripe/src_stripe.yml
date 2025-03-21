@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: stripe
+    description: copy of SAP FiN
+    database: raw
+    schema: stripe
+    tables:
+      - name: payment
+        description: raw payment data
+        columns:
+          - name: amount
+            description: "{{ doc('payment_amount') }}"
